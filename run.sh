@@ -5,7 +5,7 @@ TASK_VERSION="3.38.0"
 
 function main {
     ensure-task
-    "$(task-path)" "$@"
+    sudo "$(task-path)" "$@"
 }
 
 function ensure-task {
