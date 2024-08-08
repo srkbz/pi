@@ -4,6 +4,12 @@ tasks:
   default:
     deps: [minidlna, samba]
 
+  minidlna-package:
+    cmds:
+      - apt-get install minidlna
+    status:
+      - '[ -f /usr/sbin/minidlnad ]'
+
   minidlna:
     cmds:
       - cp ./minidlna/minidlna.conf /etc/minidlna.conf
