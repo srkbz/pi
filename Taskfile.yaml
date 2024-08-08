@@ -2,5 +2,13 @@ version: '3'
 
 tasks:
   default:
+    deps: [minidlna]
+
+  minidlna:
     cmds:
-      - echo hello
+      - cp ./minidlna/minidlna.conf /etc/minidlna.conf
+      - systemctl restart minidlna.service
+    sources:
+      - ./minidlna/minidlna.conf
+    generates:
+      - /etc/minidlna.conf
