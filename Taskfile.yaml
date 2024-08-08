@@ -10,5 +10,10 @@ tasks:
       - systemctl restart minidlna.service
     sources:
       - ./minidlna/minidlna.conf
-    generates:
-      - /etc/minidlna.conf
+
+  samba:
+    cmds:
+      - cp ./samba/smb.conf /etc/samba/smb.conf
+      - systemctl restart smbd.service
+    sources:
+      - ./samba/smb.conf
