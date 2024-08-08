@@ -18,6 +18,12 @@ tasks:
     sources:
       - ./minidlna/minidlna.conf
 
+  samba-package:
+    cmds:
+      - apt-get install samba
+    status:
+      - '[ -f /usr/sbin/smbd ]'
+
   samba:
     cmds:
       - cp ./samba/smb.conf /etc/samba/smb.conf
