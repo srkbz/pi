@@ -25,6 +25,7 @@ tasks:
       - '[ -f /usr/sbin/smbd ]'
 
   samba:
+    deps: [samba-package]
     cmds:
       - cp ./samba/smb.conf /etc/samba/smb.conf
       - systemctl restart smbd.service
