@@ -11,6 +11,7 @@ tasks:
       - '[ -f /usr/sbin/minidlnad ]'
 
   minidlna:
+    deps: [minidlna-package]
     cmds:
       - cp ./minidlna/minidlna.conf /etc/minidlna.conf
       - systemctl restart minidlna.service
