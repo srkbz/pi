@@ -2,7 +2,7 @@ version: '3'
 
 tasks:
   default:
-    deps: [minidlna]
+    deps: [minidlna, samba]
 
   minidlna:
     cmds:
