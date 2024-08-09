@@ -13,4 +13,4 @@ tasks:
       - cp '{{.TASKFILE_DIR}}/minidlna.conf' /etc/minidlna.conf
       - systemctl restart minidlna.service
     sources:
-      - ./minidlna.conf
+      - '{{.TASKFILE_DIR}}/minidlna.conf'

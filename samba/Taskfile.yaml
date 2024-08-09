@@ -1,7 +1,5 @@
 version: '3'
 
-output: prefixed
-
 tasks:
   package:
     cmds:
@@ -15,4 +13,4 @@ tasks:
       - cp '{{.TASKFILE_DIR}}/smb.conf' /etc/samba/smb.conf
       - systemctl restart smbd.service
     sources:
-      - ./smb.conf
+      - '{{.TASKFILE_DIR}}/smb.conf'

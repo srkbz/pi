@@ -1,5 +1,7 @@
 version: '3'
 
+output: prefixed
+
 includes:
   minidlna: ./minidlna
   samba: ./samba
