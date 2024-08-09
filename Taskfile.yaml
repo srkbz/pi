@@ -1,6 +1,6 @@
 version: '3'
 
-import:
+includes:
   minidlna: ./minidlna
   samba: ./samba
 
