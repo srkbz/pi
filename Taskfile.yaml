@@ -8,4 +8,10 @@ includes:
 
 tasks:
   default:
-    deps: [minidlna:configure, samba:configure]
+    deps: [public-dir, minidlna:configure, samba:configure]
+
+  public-dir:
+    cmds:
+      - mkdir -p /srv/public
+    status:
+      - '[ -d /srv/public ]'
