@@ -1,0 +1,16 @@
+version: '3'
+
+tasks:
+  package:
+    cmds:
+      - apt-get install samba
+    status:
+      - '[ -f /usr/sbin/smbd ]'
+
+  configure:
+    deps: [samba-package]
+    cmds:
+      - cp ./smb.conf /etc/samba/smb.conf
+      - systemctl restart smbd.service
+    sources:
+      - ./smb.conf
