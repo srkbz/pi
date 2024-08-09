@@ -10,7 +10,7 @@ tasks:
   configure:
     deps: [package]
     cmds:
-      - cp ./minidlna.conf /etc/minidlna.conf
+      - cp '{{.TASKFILE_DIR}}/minidlna.conf' /etc/minidlna.conf
       - systemctl restart minidlna.service
     sources:
       - ./minidlna.conf

@@ -12,7 +12,7 @@ tasks:
   configure:
     deps: [package]
     cmds:
-      - cp ./smb.conf /etc/samba/smb.conf
+      - cp '{{.TASKFILE_DIR}}/smb.conf' /etc/samba/smb.conf
       - systemctl restart smbd.service
     sources:
       - ./smb.conf
